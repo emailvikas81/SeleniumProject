@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite thread-count="4" name="Failed suite [ParallelTests]" parallel="tests">
+  <parameter name="platform" value="Windows"/>
+  <parameter name="browser" value="Safari"/>
+  <parameter name="url" value="http://dl.dropbox.com/u/55228056/bmicalculator.html"/>
+  <parameter name="version" value="5"/>
+  <test name="Windows+Safari Test(failed)" parallel="tests">
+    <parameter name="platform" value="Windows"/>
+    <parameter name="browser" value="Safari"/>
+    <parameter name="url" value="http://dl.dropbox.com/u/55228056/bmicalculator.html"/>
+    <parameter name="version" value="5"/>
+    <classes>
+      <class name="SeGridTest">
+        <methods>
+          <include name="setup"/>
+          <include name="testBmiCalculator"/>
+        </methods>
+      </class> <!-- SeGridTest -->
+    </classes>
+  </test> <!-- Windows+Safari Test(failed) -->
+</suite> <!-- Failed suite [ParallelTests] -->
